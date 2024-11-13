@@ -1,0 +1,10 @@
+package Ex;
+
+public class StudentArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

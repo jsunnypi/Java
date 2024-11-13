@@ -1,0 +1,8 @@
+package Student_grade;
+
+public class TeacherVO {
+	private String teacherid;
+	private String pw;
+	private String subject;
+	private String email;
+}

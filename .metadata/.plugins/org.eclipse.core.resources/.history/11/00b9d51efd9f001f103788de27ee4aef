@@ -1,0 +1,11 @@
+package Student_grade;
+
+public class StudentDAOImple {
+
+	public static StudentDAO getInstance() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

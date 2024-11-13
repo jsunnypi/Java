@@ -1,0 +1,70 @@
+package chat;
+
+import java.net.ServerSocket;
+import java.util.ArrayList;
+
+public class ChatServer {
+	
+	private ArrayList<ServerWorker> list = new ArrayList<ServerWorker>();
+	
+	class ServerWorker implements Runnable{
+		@Override
+		public void run() {
+			
+			
+		}
+	}
+	
+	public void go() throws Exception{
+		ServerSocket serverSocket = null;
+		
+		try {
+			
+		}catch(Exception e) {
+			
+		} finally {
+			try {
+				
+			}catch(Exception e) {
+				
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		new ChatServer().go();
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

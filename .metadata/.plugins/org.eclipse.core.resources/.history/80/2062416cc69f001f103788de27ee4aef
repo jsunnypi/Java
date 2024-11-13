@@ -1,0 +1,12 @@
+package Student_grade;
+
+public class GradeVO {
+	private int studentId;
+	private String studentName;
+	private int classyear;
+	private int kor;
+	private int eng;
+	private int math;
+	private double avg;
+	private int rank;
+}

@@ -1,0 +1,8 @@
+
+public class StudentVO {
+	private String id;
+	private String pw;
+	private String name;
+	private int classyear;
+	private String email;
+}

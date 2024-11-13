@@ -1,0 +1,28 @@
+package Ex;
+
+import java.util.*;
+
+class Student2{
+	String name;
+	String major;
+	int id;
+	int avg;
+}
+
+public class StudentArrayList {
+
+	public static void main(String[] args) {
+		ArrayList<String> student = new ArrayList<>();
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("학생 이름, 학과, 학번, 학점 평균을 입력하세요.");
+	
+		for(int i=0; i<4; i++) {
+			System.out.println(">>");
+			String stn = sc.next();
+			student.add(stn);
+		}
+		
+	}
+
+}

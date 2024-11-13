@@ -1,0 +1,21 @@
+package sungjuk;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class SelectList {
+	public void SelectList() {
+		Connection con;
+		PreparedStatement pstmt;
+		ResultSet rs;
+		
+		try {
+			con = DBConnect.getConnection();
+			String sql = "select * from sungjuk order by name ASC";
+		}
+		catch(Exception e) {
+			
+		}
+	}
+}

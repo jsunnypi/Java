@@ -1,0 +1,36 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ServerEx2 {
+
+	ServerSocket serverSocket;
+	Socket socket;
+	
+	BufferedReader reader; // 입력스트림
+	BufferedWriter writer; // 출력스트림
+	
+	BufferedReader keyboardReader; // 키보드에 대한 입력 데이터를 담당
+	
+	public ServerEx2() {
+		initData();
+	}
+	
+	private void initData() {
+		try {
+			
+		}
+		catch(Exception e) {
+			
+		}
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		new ServerEx2();
+		
+	}
+
+}

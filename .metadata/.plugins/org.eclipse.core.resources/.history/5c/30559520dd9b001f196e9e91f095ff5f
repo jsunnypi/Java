@@ -1,0 +1,29 @@
+package Ex;
+
+import java.util.*;
+
+public class CountryEx {
+
+	public static void main(String[] args) {
+		HashMap<String, Integer> nations = new HashMap<String, Integer>();
+		
+		System.out.println("나라 이름과 인구를 입력하세요. (예: Korea 5000)");
+		
+		Scanner sc = new Scanner(System.in);
+		String country = sc.next();
+		int num = sc.nextInt();
+		
+		while(true) {
+			System.out.println("나라 이름, 인구 >> "+ country +" "+ num);
+			nations.put(country, num);
+			
+			if(country.equals("그만")) {
+				break;
+			}
+			
+		}
+		
+	
+	}
+
+}

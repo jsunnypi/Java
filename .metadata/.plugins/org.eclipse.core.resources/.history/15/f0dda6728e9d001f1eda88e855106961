@@ -1,0 +1,16 @@
+package sungjuk;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class DBConnect {
+	Connection con;
+	Statement stmt;
+	ResultSet rs;
+	String url = "jdbc:mysql://localhost:3306/Haksa";
+	String id = "root";
+	String pw = "1234";
+	
+	
+}

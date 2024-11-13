@@ -1,0 +1,11 @@
+package Student_grade;
+
+public class Loginframe {
+
+	protected static final String frame = null;
+
+	public Loginframe() {
+		// TODO Auto-generated constructor stub
+	} 
+
+}

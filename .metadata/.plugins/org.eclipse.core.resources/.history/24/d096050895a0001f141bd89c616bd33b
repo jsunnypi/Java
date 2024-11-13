@@ -1,0 +1,16 @@
+import java.net.Socket;
+
+public class ClientEx {
+	// 통신을 하기 위한 소켓이 필요( 서버 주소(IP) + 포트 )
+	Socket soket;
+	
+	final String IP = "192.168.0.16";
+	final int PORT = 9000; 
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

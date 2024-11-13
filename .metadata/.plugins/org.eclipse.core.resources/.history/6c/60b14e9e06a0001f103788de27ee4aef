@@ -1,0 +1,7 @@
+package Student_grade;
+
+public interface TeacherDAO {
+
+	boolean teacherlogin(String id, String pw, String subject);
+
+}

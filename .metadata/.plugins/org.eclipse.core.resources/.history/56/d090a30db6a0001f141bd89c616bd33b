@@ -1,0 +1,36 @@
+package chatting;
+
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ChatServer {
+	ServerSocket serverSocket;
+	Socket socket;
+	List<Thread> list;
+	
+	public ChatServer() {
+		list = new ArrayList<Thread>();
+		System.out.println("서버가 시작되었습니다.");
+	}
+	
+	public void giveAndTake() {
+		try {
+			serverSocket = new ServerSocket(5420);
+			serverSocket.setReuseAddress(true);
+			
+			while(true) {
+				socket = serverSocket.accept();
+				ServerSocketThread thread = new serverSocketThread(this, socket);
+				addClient(thread);
+				thread.start();
+				
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+		}
+	}
+}

@@ -1,0 +1,33 @@
+//while문
+
+package ch02;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner stdin = new Scanner(System.in);
+		System.out.println("원하는 단을 입력하세요:");
+		int dan = stdin.nextInt();
+		int x = 1;
+		while(x<=9)
+		{
+			System.out.println(dan +"*"+ x +"="+dan*x+);
+		}
+		
+		
+		
+		
+			
+//		int hap = 0, count = 1;
+//		while (count <= 10)
+//		{
+//			hap += count;
+//			count ++;
+//		}
+//		System.out.println("1부터 10까지의 합은 "+ hap + "입니다.");
+
+	}
+
+}
