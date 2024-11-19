@@ -1,0 +1,63 @@
+package Student_grade;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
+public class GradeUpdateClickFrame {
+
+	private JPanel contentPane;
+	private JTextField textclassyeat, textstudentname, textkorean, textenglish, textmath;
+	private JFrame frame;
+	private DefaultTableModel tableModel;
+	
+	private GradeDAO dao;
+	private JLabel stuidLabel;
+	
+	
+	
+	public GradeUpdateClickFrame(String studentid) {
+		frame = this;
+		dao = GradeDAOImple.getInstance();
+		
+	}
+
+	public void setVisible(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

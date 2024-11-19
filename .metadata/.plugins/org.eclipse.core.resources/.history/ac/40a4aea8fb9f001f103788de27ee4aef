@@ -1,7 +1,0 @@
-package Student_grade;
-
-public class Loginframe {
-
-	protected Object frame;
-
-}

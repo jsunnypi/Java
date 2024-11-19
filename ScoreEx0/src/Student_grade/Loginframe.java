@@ -66,6 +66,7 @@ public class Loginframe extends JFrame {
 		
 		btnstudentjoin.setFont(new Font("굴림", Font.PLAIN, 24));
 		btnstudentjoin.setBounds(193, 395, 211, 46);
+		btnstudentjoin.setBackground(new Color(30,144,255));
 		btnstudentjoin.setBackground(Color.black);
 		frame.getContentPane().add(btnstudentjoin);
 		
@@ -90,7 +91,7 @@ public class Loginframe extends JFrame {
 				
 				if(loggIn) {
 					StudentGradeFrame studentGradeFrame = new StudentGradeFrame();
-					((JComponent) studentGradeFrame.frame).setVisible(true);
+					studentGradeFrame.frame.setVisible(true);
 					frame.setVisible(false);
 				}
 				else {

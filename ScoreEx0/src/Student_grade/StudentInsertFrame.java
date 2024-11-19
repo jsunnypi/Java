@@ -49,6 +49,11 @@ public class StudentInsertFrame extends JFrame {
 		txtName.setBounds(125, 96, 144, 33);
 		contentPane.add(txtName);
 		
+		JLabel lblId = new JLabel("아이디");
+		lblId.setBounds(12, 10, 101, 24);
+		contentPane.add(lblId);
+
+		
 		JLabel lblPw = new JLabel("비밀번호");
 		lblPw.setBounds(12, 54, 101, 24);
 		contentPane.add(lblPw);
@@ -88,12 +93,13 @@ public class StudentInsertFrame extends JFrame {
 		btnFindid = new JButton("ID 찾기");
 		btnFindid.addActionListener(new ActionListener() {
 
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				StudentIdFindFrame studentIdFindFrame = new StudentIdFindFrame();
-				((JComponent) StudentIdFindFrame.frame).setVisible(true);
+				studentIdFindFrame.frame.setVisible(true);
 				
 				frame.setVisible(false);
-			}	
+			}
 		});
 		
 		btnFindid.setBounds(155, 263, 114, 38);

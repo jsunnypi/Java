@@ -5,39 +5,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public interface TeacherDAO {
-
-	public boolean teacherlogin(String id, String pw, String subject);
-	boolean loggedIn = false;
-	Connection conn = null;
-	PreparedStatement pstmt = null;
-	ResultSet rs = null;
-	
-	try {
-		conn = DriverManager.getConnection(URL, ID, PW);
-		System.out.println("DB 연결 성공");
-		
-		pstmt = conn.prepareStatement(SQL_TEACHER_LOGIN);
-		
-		pstmt.setString(1, id);
-		pstmt.setString(2, pw);
-		pstmt.setString(3, subject);
-		
-		rs = pstmt.executeQuery();
-		loggedIn = rs.next();
-	
-	} catch(SQLException e) {
-		e.printStackTrace();
-	} finally {
-		try {
-			rs.close();
-			pstmt.close();
-			conn.close();
-		} catch(SQLException e) {
-			e.printStackTrace();
-		}
-	}
-	return loggedIn;
-	
+	public abstract int insert(TeacherVO vo);
+	public abstract boolean teacherlogin(String id, String pw, String subject);
+	public abstract ArrayList<TeacherVO> select();
+	public abstract TeacherVO selectteacher(String email);
+	public abstract int updateteacher(String email, TeacherVO vo);
+	public abstract int deleteteacher(String email);
 }

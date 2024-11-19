@@ -175,23 +175,17 @@ public class GradeMainframe {
 		btnselectstudentid.setBounds(220, 336, 110, 34);
 		frame.getContentPane().add(btnselectstudentid);
 		
-		JButton btnupdate = new JButton("수정");
-		btnupdate.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				updateGrade();
-				textclassyear.setText("");
-				textstudentname.setText("");
-				textkorean.setText("");
-				textenglish.setText("");
-				textmath.setText("");
-			}		
-		});
-		
-		btnupdate.setFont(new Font("나눔고딕", Font.PLAIN, 18));
-		btnupdate.setBounds(331, 336, 110, 34);
-		frame.getContentPane().add(btnupdate);
+		/*
+		 * JButton btnupdate = new JButton("수정"); btnupdate.addActionListener(new
+		 * ActionListener() {
+		 * 
+		 * @Override public void actionPerformed(ActionEvent e) { updateGrade();
+		 * textclassyear.setText(""); textstudentname.setText("");
+		 * textkorean.setText(""); textenglish.setText(""); textmath.setText(""); } });
+		 * 
+		 * btnupdate.setFont(new Font("나눔고딕", Font.PLAIN, 18)); btnupdate.setBounds(331,
+		 * 336, 110, 34); frame.getContentPane().add(btnupdate);
+		 */
 		
 		JButton btndelete = new JButton("삭제");
 		btndelete.addActionListener(new ActionListener() {
@@ -229,8 +223,10 @@ public class GradeMainframe {
 			public void mouseClicked(MouseEvent e) {
 				int row = table.getSelectedRow();
 				int col = table.getSelectedColumn();
-				Object value = table.getValueAt(row, col);
+				Object value = table.getValueAt(row, 0);
 				System.out.println(value);
+				GradeUpdateClickFrame studentid = new GradeUpdateClickFrame(value.toString());
+				studentid.setVisible(true);
 			}
 		});
 		table.setFont(new Font("굴림", Font.PLAIN, 15));
@@ -265,7 +261,7 @@ public class GradeMainframe {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Loginframe loginFrame = new Loginframe();
-				((Component) loginFrame.frame).setVisible(true);
+				loginFrame.frame.setVisible(true);
 				
 				frame.setVisible(false);
 			}
@@ -359,7 +355,13 @@ public class GradeMainframe {
 	}
 	
 	protected void deleteGrade() {
-		int index = Integer.parseInt(txtAreaLog_1.getText());
+		int index;
+		try {
+		index = Integer.parseInt(txtAreaLog_1.getText());
+		} catch(NumberFormatException e) {
+			JOptionPane.showMessageDialog(frame, "학번을 정확히 입력하세요");
+			return;
+		}
 		
 		int result = dao.delete(index);
 		if(result == 1) {
@@ -406,32 +408,7 @@ public class GradeMainframe {
 			}
 		}
 	}
-	
-	JButton btnStudentLogin = new JButton("학생용 로그인");
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
+
+	
+	

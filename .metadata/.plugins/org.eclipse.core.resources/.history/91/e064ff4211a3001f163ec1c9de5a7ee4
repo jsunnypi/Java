@@ -1,0 +1,76 @@
+package Student_grade;
+
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+
+public class GradeUpdateClickFrame extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textclassyear, textstudentname, textkorean, textenglish, textmath;
+	private JFrame frame;
+	private DefaultTableModel tableModel;
+
+	private GradeDAO dao;
+	private JLabel stuidLabel;
+
+	public GradeUpdateClickFrame(String studentid) {
+		frame = this;
+		dao = GradeDAOImple.getInstance();
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 230, 379);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		textclassyear = new JTextField();
+		textclassyear.setFont(new Font("굴림", Font.PLAIN, 13));
+		textclassyear.setColumns(10);
+		textclassyear.setBounds(51, 53, 144, 33);
+		contentPane.add(textclassyear);
+		
+		textstudentname = new JTextField();
+		textstudentname.setFont(new Font("굴림", Font.PLAIN, 13));
+		textstudentname.setColumns(10);
+		textstudentname.setBounds(51, 96, 144, 33);
+		contentPane.add(textstudentname);
+	}
+
+	public void setVisible(boolean b) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

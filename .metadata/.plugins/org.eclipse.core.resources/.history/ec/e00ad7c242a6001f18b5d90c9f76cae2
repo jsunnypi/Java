@@ -1,0 +1,8 @@
+package Student_grade;
+
+import javax.swing.JFrame;
+
+public class TeacherInsertFrame extends JFrame{
+
+
+}

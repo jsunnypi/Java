@@ -1,0 +1,11 @@
+package Student_grade;
+
+public interface StudentDAO {
+
+	boolean login(String id, String pw) throws Exception;
+
+	int insert(StudentVO vo);
+
+	StudentVO select(String email);
+
+}

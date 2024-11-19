@@ -1,0 +1,14 @@
+package Student_grade;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public interface TeacherDAO {
+
+	public abstract int insert(TeacherVo vo);
+	public boolean teacherlogin(String id, String pw, String subject);
+	
+}

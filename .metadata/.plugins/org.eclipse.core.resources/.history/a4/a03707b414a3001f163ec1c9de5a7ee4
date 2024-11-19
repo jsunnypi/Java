@@ -1,0 +1,6 @@
+package Student_grade;
+
+public interface StudentDAO {
+
+	
+}

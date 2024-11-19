@@ -1,0 +1,14 @@
+package Student_grade;
+
+public class GradeUpdateClickFrame {
+
+	public GradeUpdateClickFrame(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void setVisible(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,107 @@
+package Student_grade;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.swing.JButton;
+
+public class TeacherDAOImple implements TeacherDAO, OracleTeacherQuery {
+
+	private static TeacherDAOImple instance = null;
+	
+	private TeacherDAOImple() {
+		
+	}
+	
+	private String URL = "jdbc:mysql://localhost:3306/haksa";
+	private String USER = "root";
+	private String PASSWORD = "1234";
+	
+	public static TeacherDAOImple getInstance() {
+		if(instance == null) {
+			instance = new TeacherDAOImple();
+		}
+		return instance;
+	}
+	
+
+
+	public int insert(TeacherVO vo) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int result = 0;
+		
+		try {
+			
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("드라이버 로드 성공");
+			
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+			System.out.println("DB연결 성공");
+			
+			pstmt = conn.prepareStatement(SQL_INSERT);
+			
+			pstmt.setString(1, vo.getTeacherid());
+			pstmt.setString(2, vo.getPw());
+			pstmt.setString(3, vo.getName());
+			pstmt.setString(4, vo.getSubject());
+			pstmt.setString(5, vo.getEmail());
+			
+			result = pstmt.executeUpdate();
+			
+			System.out.println(result + "행이 삽입됐습니다.");
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				pstmt.close();
+				conn.close();
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}return result;
+	}
+
+	@Override
+	public int insert(TeacherVo vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean teacherlogin(String id, String pw, String subject) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

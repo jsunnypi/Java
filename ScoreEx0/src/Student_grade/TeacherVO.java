@@ -5,6 +5,12 @@ public class TeacherVO {
 	private String pw;
 	private String subject;
 	private String email;
+	public TeacherVO(String teacherid, String pw, String name, String subject, String teacheremail) {
+		// TODO Auto-generated constructor stub
+	}
+	public TeacherVO() {
+		// TODO Auto-generated constructor stub
+	}
 	public String getTeacherid() {
 		return teacherid;
 	}
@@ -32,6 +38,14 @@ public class TeacherVO {
 	public String getName() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	@Override
+	public String toString() {
+		return "TeacherVO [teacherid=" + teacherid + ", pw=" + pw + ", subject=" + subject + ", email=" + email + "]";
+	}
+	public void setName(String name) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

@@ -1,5 +1,0 @@
-package Student_grade;
-
-public interface OracleGradeQuery {
-
-}

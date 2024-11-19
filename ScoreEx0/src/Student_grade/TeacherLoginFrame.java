@@ -104,17 +104,23 @@ public class TeacherLoginFrame extends JFrame{
 			}			
 		});
 		
-		btnInsert.setBounds(150, 271, 119, 45);
+		btnInsert.setBounds(100,271,119,45);
 		contentPane.add(btnInsert);
-		
+		JButton btnLogout= new JButton("로그아웃");
+		btnLogout.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Loginframe loginFrame = new Loginframe();
+				loginFrame.frame.setVisible(true);
+				
+				frame.setVisible(false);
+			}
+		});
+		btnInsert.setBounds(150, 271, 119, 45);
+		contentPane.add(btnLogout);
 	}
 	
 
-	
-	
-	public void setVisible(boolean b) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

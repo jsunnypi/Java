@@ -130,7 +130,7 @@ public class StudentGradeFrame {
 
 		scrollPane.setViewportView(table);
 
-		JLabel lblstudentid_1 = new JLabel("학번검색");
+		JLabel lblstudentid_1 = new JLabel("학번검색"); 
 		lblstudentid_1.setFont(new Font("나눔고딕", Font.PLAIN, 20));
 		lblstudentid_1.setBounds(12, 10, 76, 34);
 		frame.getContentPane().add(lblstudentid_1);

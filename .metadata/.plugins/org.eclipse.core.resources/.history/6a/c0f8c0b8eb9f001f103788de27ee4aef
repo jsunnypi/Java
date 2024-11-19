@@ -1,9 +1,0 @@
-package Student_grade;
-
-public class Loginframe {
-
-	public Loginframe() {
-		// TODO Auto-generated constructor stub
-	} 
-
-}
